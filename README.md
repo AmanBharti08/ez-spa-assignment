@@ -1,1 +1,1 @@
-# ez-spa-assignmrnt
+# ez-spa-assignment
