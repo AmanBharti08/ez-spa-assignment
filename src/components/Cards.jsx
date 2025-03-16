@@ -47,23 +47,21 @@ const Cards = () => {
   ];
 
   return (
-    <div className="flex justify-center">
-      <div className="p-8 flex-wrap flex gap-5 w-[90%] justify-center">
-        {cards.map((card, index) => {
-          return (
-            <div
-              key={index}
-              className="p-4 bg-gradient-to-tr from-[#16425f] via-[#091627] to-[#16425f] w-1/4 h-[200px] rounded-md text-white flex flex-col gap-5"
-            >
-              <div className="flex justify-between">
-                <img src={card.img} alt="" className="w-8" />
-                <h1 className="text-xl text-[#3cc3f1]">{card.title}</h1>
-              </div>
-              <h1>{card.description}</h1>
+    <div className="p-5 gap-5 flex flex-wrap justify-center">
+      {cards.map((card, index) => {
+        return (
+          <div
+            key={index}
+            className="p-4 bg-gradient-to-tr from-[#16425f] via-[#091627] to-[#16425f]  min-h-[200px] rounded-md text-white flex flex-col gap-5 md:w-[45%] lg:w-[30%]"
+          >
+            <div className="flex justify-between">
+              <img src={card.img} alt="" className="w-8" />
+              <h1 className="text-xl text-[#3cc3f1]">{card.title}</h1>
             </div>
-          );
-        })}
-      </div>
+            <h1>{card.description}</h1>
+          </div>
+        );
+      })}
     </div>
   );
 };
